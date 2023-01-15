@@ -1,0 +1,29 @@
+@media (min-width: 320px) and (max-width: 630px) {
+  .gallery {
+    height: 102vh !important;
+    padding: 0 !important;
+  }
+
+  .gallery__slide {
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0;
+  }
+  .single-item {
+    max-width: 350px !important;
+    height: 200px !important;
+  }
+  .galletry__ticked {
+    height: 300px;
+    margin-bottom: 10px !important;
+    color: aliceblue;
+    background: url(../../__image/_index/kunashir_main_fone.gif) no-repeat
+      center center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .gallery__main-block {
+    height: 500px !important;
+  }
+}

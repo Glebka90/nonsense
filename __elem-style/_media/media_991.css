@@ -1,0 +1,112 @@
+  @import url(media_anim.css);
+  /* Portrait tablets and small desktops */
+@media (min-width: 320px) and (max-width: 991px) {
+
+  .nav {
+    align-items: start;
+    justify-content: start;
+  }
+  .nav__list {
+    position: absolute;
+    top: 32px;
+    left: 20px !important;
+    visibility: hidden;
+    width: 200px;
+    flex-direction: column;
+  }
+  .list_block {
+    margin: 1px 0 0 0;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .list_block:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  .nav__link {
+    height: 50px;
+    padding-left: 40px;
+    align-items: center;
+    justify-content: start;
+  }
+  .nav__line {
+    display: none;
+  }
+  .burger__toggle {
+    width: 26px;
+    height: 26px;
+    top: 10px;
+    left: 20px;
+    z-index: 100;
+    visibility: visible;
+    position: absolute;
+    opacity: 0;
+  }
+  .burger__button {
+    width: 26px;
+    height: 26px;
+    display: flex; /* используем flex для центрирования содержимого */
+    align-items: center; /* центрируем содержимое кнопки */
+    flex-direction: column;
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .burger__line {
+    width: 100%;
+    height: 5px;
+    margin-top: 5px;
+    background-color: black;
+  }
+
+  .burger__toggle:checked ~ .burger__button > .line-1 {
+    margin-top: 5px;
+    position: absolute;
+    top: 10px;
+    transition-duration: 0.25s;
+    transform: rotate(-45deg);
+  }
+  .burger__toggle:checked ~ .burger__button > .line-2 {
+    position: absolute;
+    top: 10px;
+    transition-duration: 0.25s;
+    transform: rotate(45deg);
+  }
+  .burger__toggle:checked ~ .burger__button > .line-3 {
+    position: absolute;
+    top: 10px;
+    transition-duration: 0.25s;
+    transform: rotate(-45deg);
+  }
+
+  .burger__toggle:checked ~ .nav__list {
+    transition: 1s;
+    visibility: visible;
+    left: 0;
+    transform: translateY(-350%);
+    animation: ani 1s forwards;
+  }
+  .gallery{
+    height: 130vh !important;
+    padding: 10px;
+  }
+.galletry__ticked{
+  max-width: 350px;
+  max-height: 480px;
+}
+  .gallery__slide{
+    flex-direction: column;
+    margin:0;
+  }
+  .gallery__main-block{
+    margin: 0 10px !important;
+  }
+  .single-item {
+    max-width: 400px !important;
+    height: 400px !important;
+  }
+.galletry__ticked{
+  margin-bottom: 10px !important;
+}
+}
